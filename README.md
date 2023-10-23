@@ -41,13 +41,13 @@ var aesService = new AESCryptoService(); // or new AESCryptoService(myBase64Stri
 
 Console.WriteLine($"AES KEY: {aesService.Key}, AES IV: {aesService.IV}");
 
-var encryptedData = aesService.Encrypt(new byte[] myInputByteArray, out string initialVector); // 1. yöntem
-var encryptedData = aesService.Encrypt("inputFilePath", out string initialVector); // 2. yöntem
-var encryptedData = aesService.Encrypt("inputFilePath", "outputFilePath", out string initialVector); // 3. yöntem
+var encryptedData = aesService.Encrypt(new byte[] myInputByteArray, out string initialVector);
+var encryptedData = aesService.Encrypt("inputFilePath", out string initialVector);
+var encryptedData = aesService.Encrypt("inputFilePath", "outputFilePath", out string initialVector);
 
-var decryptedData = aesService.Decrypt(new byte[] myEncryptedByteArray); // 1. yöntem
-var decryptedData = aesService.Decrypt("encryptedFilePath"); // 2. yöntem
-var decryptedData = aesService.Decrypt("encryptedFilePath", "outputFilePath"); // 3. yöntem
+var decryptedData = aesService.Decrypt(new byte[] myEncryptedByteArray);
+var decryptedData = aesService.Decrypt("encryptedFilePath");
+var decryptedData = aesService.Decrypt("encryptedFilePath", "outputFilePath");
 ```
 - RSA (Asymmetric) Encryption Method
 ```
